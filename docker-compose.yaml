@@ -71,10 +71,10 @@ services:
       - RAILS_ENV=production
       - RAILS_LOG_TO_STDOUT=true
       - SECRET_KEY_BASE=Testing1234
-      - BOTPRESS_ENDPOINT=http://botpress:3000
-      - BOTPRESS_BOT_ID=hello
-      - CHATWOOT_ENDPOINT=http://chatwoot:3000
-      - CHATWOOT_BOT_TOKEN=password
+      - BOTPRESS_ENDPOINT=http://89.208.106.66:3001
+      - BOTPRESS_BOT_ID=chatwoot
+      - CHATWOOT_ENDPOINT=http://89.208.106.66:3000
+      - CHATWOOT_BOT_TOKEN=cu8tBtpyNxvz3icZHfByHu6s
     ports:
       - '3002:3000'
 

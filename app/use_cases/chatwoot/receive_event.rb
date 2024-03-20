@@ -25,6 +25,13 @@ class Chatwoot::ReceiveEvent < Micro::Case
       botpress_endpoint = event['botpress_endpoint'] || ENV['BOTPRESS_ENDPOINT']
       botpress_bot_id = Chatwoot::GetDynamicAttribute.call(event: event, attribute: 'botpress_bot_id').data[:attribute]
 
+      pp '======================================'
+      pp {
+        event =>  event,
+        botpress_endpoint => botpress_endpoint,
+        botpress_bot_id => botpress_bot_id
+      }
+      pp '======================================'
       botpress_responses = Chatwoot::SendToBotpress.call(
         event: event,
         botpress_endpoint: botpress_endpoint,
