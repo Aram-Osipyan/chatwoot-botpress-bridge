@@ -75,6 +75,7 @@ services:
       - BOTPRESS_BOT_ID=chatwoot
       - CHATWOOT_ENDPOINT=http://89.208.106.66:3000
       - CHATWOOT_BOT_TOKEN=cu8tBtpyNxvz3icZHfByHu6s
+      - CHATWOOT_ALLOWED_STATUSES=open,pending
     ports:
       - '3002:3000'
 

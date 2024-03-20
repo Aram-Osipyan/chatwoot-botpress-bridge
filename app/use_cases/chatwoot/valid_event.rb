@@ -19,7 +19,7 @@ class Chatwoot::ValidEvent < Micro::Case
     if ENV['CHATWOOT_ALLOWED_STATUSES'].present?
       allowed_statuses = ENV['CHATWOOT_ALLOWED_STATUSES'].split(',')
     else
-      allowed_statuses = %w[pending]
+      allowed_statuses = %w[pending open]
     end
 
     allowed_statuses.include?(status)
