@@ -17,10 +17,12 @@ class Chatwoot::SendToBotpress < Micro::Case
         'event': event
       }
     }
+    Rails.logger.info("event #{event}")
 
     response = Faraday.post(url, body.to_json, {'Content-Type': 'application/json'})
 
     Rails.logger.info("Botpress response")
+
     Rails.logger.info("Status code: #{response.status}")
     Rails.logger.info("Body: #{response.body}")
 

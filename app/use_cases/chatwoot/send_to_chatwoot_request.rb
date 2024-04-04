@@ -17,7 +17,7 @@ class Chatwoot::SendToChatwootRequest < Micro::Case
 
     Rails.logger.info("Chatwoot response")
     Rails.logger.info("Status code: #{response.status}")
-    Rails.logger.info("Body: #{response.body}")
+    #Rails.logger.info("Body: #{response.body}")
 
     if (response.status == 200)
       Success result: JSON.parse(response.body)
